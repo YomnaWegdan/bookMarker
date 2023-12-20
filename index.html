@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
+
+
+
+
+
+</head>
+
+<body>
+    <div class="container w-75  min-vh-100">
+        <h1 class="text-center pb-5 pt-2">Bookmarker</h1>
+
+        <h4 class="text-center mb-5 px-0 "><i class="fa-solid fa-bookmark fs-1 me-2 "></i>Bookmark your favorite sites <i class="fa-solid fa-bookmark fs-1"></i>  </h4>
+        <form class="p-5 shadow-lg rounded-5">  
+          <i class="fa-solid fa-book"></i>     
+            <label for="siteName">Site Name</label>
+            <input class="form-control mb-3 shadow-none " id="siteName" placeholder="Bookmark Name"/>
+            <i class="fa-solid fa-link"></i>
+            <label for="siteUrl">Site URL</label>
+            <input class="form-control mb-3 shadow-none " id="siteUrl" placeholder="Website URL"/>
+            <p id="messageName" class=" text-danger  d-none">Invalid</p>
+            <!-- <button class="btn btn-outline-dark w-100 mt-5 d-block rounded-5" type="button" id="btn"
+            data-bs-toggle="modal" data-bs-target="#cardValidation">Submit</button> -->
+            <button class="btn btn-outline-dark w-100 mt-5 d-block rounded-5" type="button" id="btn">Submit</button>
+
+         
+        </form>
+        
+        <input class="form-control mb-3 shadow-none w-75 m-auto mt-5 border-black rounded-5 " id="searchInput" placeholder="Search by name ..."/>
+
+        <div class="modal fade" id="modalCard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <!-- <div class="modal fade" tabindex="-1" id="cardValidation"> -->
+            <div class="modal-dialog">
+              <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <div class="p-2 rounded-circle bg-danger"></div>
+                    <div class="p-2 rounded-circle bg-warning mx-2"></div>
+                    <div class="p-2 rounded-circle bg-success"></div>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <div class="modal-body">
+                  <h5>Site name or URL is not valid, please follow the rules below:</h5>
+                  
+                  <p><i class="fa-solid fa-circle-chevron-right text-danger"></i> Site name must contain at least 3 characters</p>
+                  <p><i class="fa-solid fa-circle-chevron-right text-danger"></i> Site URL must be a valid one such as www.google.com</p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+
+        <table class=" table text-center pb-5 w-100 mx-auto rounded-5 shadow-lg mt-5">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableRow">
+            </tbody>
+        </table>
+
+
+       
+
+
+
+    </div>
+
+  
+    <script src="./Js/index.js"></script>
+    <script src="./Js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
